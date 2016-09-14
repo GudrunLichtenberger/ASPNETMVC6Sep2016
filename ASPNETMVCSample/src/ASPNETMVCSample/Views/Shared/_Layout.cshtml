@@ -6,6 +6,8 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
+    @RenderSection("mysection", required: false)
+
     <h1>Heading from the layout</h1>
     <div>
         @RenderBody()
