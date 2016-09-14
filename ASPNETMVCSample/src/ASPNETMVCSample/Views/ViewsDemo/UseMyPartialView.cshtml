@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.0.js"></script>
+
+<script>
+
+    $(function () {
+        $("#loadlist").click(function () {
+            $("#result").load("/ViewsDemo/MyPartialView");
+
+        });
+
+    });
+</script>
+
+<div id="result"></div>
+<button id="loadlist" value="load list">click me!</button>

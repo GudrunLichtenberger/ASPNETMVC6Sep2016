@@ -18,6 +18,7 @@ namespace ASPNETMVCSample
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<ICalcService, CalcService>();
+            services.AddMvcCore();
             services.AddMvc();
         }
 
