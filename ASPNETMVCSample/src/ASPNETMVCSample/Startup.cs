@@ -36,6 +36,8 @@ namespace ASPNETMVCSample
             services.AddSingleton<ICalcService, CalcService>();
             services.AddMvcCore();
             services.AddSingleton<IBooksService, BooksService>();
+            services.AddBookChaptersService();
+            services.AddSwaggerGen();
             services.AddMvc();
             services.AddDbContext<BooksContext>(options =>
             {
@@ -52,6 +54,8 @@ namespace ASPNETMVCSample
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseSwagger();
+            app.UseSwaggerUi();
 
             // app.UseMvcWithDefaultRoute();
             app.UseMvc(routes =>
